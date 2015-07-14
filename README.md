@@ -6,6 +6,11 @@ PILER was originally conceived and implemented by Robert Edgar and Eugene Myers.
 ## License
 The modifications to PILER distributed here are released to the public domain.
 
+## Original License
+The PILER software, including object and source code and documentation, is hereby donated to the public domain.
+Disclaimer of warranty
+THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
+
 ## Citing
 R.C. Edgar and E.W. Myers, *PILER: identification and classification of genomic repeats.*
 Bioinformatics. 2005 Jun 1;21 Suppl 1:i152-i158
