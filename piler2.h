@@ -6,14 +6,14 @@
 #include <errno.h>
 #include <stdarg.h>
 
-#define PILER_LONG_VERSION "PILER v1.0"
+#define PILER_LONG_VERSION "PILER-64 v1.0"
 
 #if	_MSC_VER
 #pragma warning(disable:4800)	// don't warn about bool->int conversion
 #endif
 
-#ifdef _DEBUG
-#define DEBUG	1
+#ifdef	_DEBUG
+#define	DEBUG	1
 #endif
 
 #ifdef	WIN32
@@ -35,10 +35,10 @@ extern const char *g_ProcessName;
 // by hiding cast and sizeof.
 #define	all(t, n)		(t *) allocmem((n)*sizeof(t))
 #define	reall(p, t, n)		p = (t *) reallocmem(p, (n)*sizeof(t))
-#define zero(p,	t, n)	memset(p, 0, (n)*sizeof(t))
-void *allocmem(int bytes);
+#define zero(p,	t, n)		memset(p, 0, (n)*sizeof(t))
+void *allocmem(size_t bytes);
 void freemem(void *p);
-void *reallocmem(void *p, int bytes);
+void *reallocmem(void *p, size_t bytes);
 
 char *strsave(const char *s);
 

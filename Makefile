@@ -1,6 +1,6 @@
 CFLAGS = -O3 -DNDEBUG=1
-LDLIBS = -lm -static
-# LDLIBS = -lm
+#LDLIBS = -lm -static
+LDLIBS = -lm
 
 OBJ = .o
 EXE =
@@ -11,15 +11,20 @@ CP = cp
 GPP = g++
 LD = $(GPP) $(CFLAGS)
 CPP = $(GPP) -c $(CFLAGS) 
-CC = gcc -c $(CFLAGS) 
+CC = gcc -c $(CFLAGS)
 
-all: piler2
+binary = piler-64
+
+all: $(binary)
 
 CPPSRC = $(sort $(wildcard *.cpp))
-CPPOBJ	= $(subst .cpp,.o,$(CPPSRC))
+CPPOBJ = $(subst .cpp,.o,$(CPPSRC))
 
 $(CPPOBJ): %.o: %.cpp
 	$(CPP) $< -o $@
 
-piler2: $(CPPOBJ)
-	$(LD) -o piler2 $(CPPOBJ) $(LDLIBS)
+piler-64: $(CPPOBJ)
+	$(LD) -o $(binary) $(CPPOBJ) $(LDLIBS)
+
+clean:
+	$(RM) *.o $(binary)
